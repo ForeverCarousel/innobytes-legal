@@ -21,13 +21,17 @@
 <body>
 <div class="wrap">
   <h1>Privacy Policy</h1>
-  <div class="date">Last updated: October 9, 2026</div>
-  <nav><a href="index.html">Home</a><a href="terms.html">Terms of Use</a><a href="support.html">Support</a></nav>
+  <div class="date">Last updated: October 13, 2026</div>
+  <nav><a href="index.html">Home</a><a href="terms.html">Terms of Use</a><a href="market.html">Art Stall Rules</a><a href="support.html">Support</a> · <a href="delete-account.html">Delete account</a></nav>
 
   <p class="lead">Photo Paint is a paint-by-numbers colouring app. You can use the
   core experience <strong>without an account</strong>. The photos you use to create a
-  drawing are processed <strong>entirely on your device and are never uploaded</strong>.
-  We do not sell your data, we do not show ads, and we do not track you across apps.</p>
+  drawing are processed <strong>entirely on your device</strong> and
+  <strong>your photo is never uploaded unless you deliberately post the drawing to the
+  Art Stall</strong> (our marketplace) — in that case the drawing and the photo you
+  created it from are uploaded to the cloud and are publicly downloadable by the people
+  who buy it. We do not sell your data, we do not show ads, and we do not track you
+  across apps.</p>
 
   <h2>1. Who we are and what this policy covers</h2>
   <p>This Privacy Policy applies to the <strong>Photo Paint</strong> mobile app
@@ -48,12 +52,15 @@
   A nickname and an optional short bio are stored with your profile
   (the nickname is also printed as a watermark on the artwork you export).</p>
 
-  <p><strong>b) Content you post.</strong> The App has a community feed ("Moments").
-  If you publish a drawing, text, thumbnail or drawing-process video there, we store
-  that content, together with the associated comments and likes, so it can be shown to
-  other users. Publishing is always your choice — anything you never publish stays on
-  your device. You can delete your posts and comments, and you can block or report
-  other users.</p>
+  <p><strong>b) Content you post.</strong> The App has a community feed ("Moments")
+  and a marketplace ("the Art Stall"). If you publish a drawing, text, thumbnail or
+  drawing-process video to the community feed, we store that content, together with the
+  associated comments and likes, so it can be shown to other users. If you post a
+  drawing to the Art Stall, we also store the drawing assets and the photo you created
+  it from, so that buyers can download them (see section 3 and section 6). Publishing of
+  any kind is always your choice — anything you never publish stays on your device. You
+  can delete your posts and comments, unlist your Art Stall drawings, and you can block
+  or report other users.</p>
 
   <p><strong>c) Drawing progress and in-app activity.</strong> We store your colouring
   progress per drawing, time spent, completed works, points, items, achievements and
@@ -65,7 +72,9 @@
   processed by Apple. We never receive your card details or your Apple ID password.
   We receive the purchase result (which product was bought, and its status) from the App
   Store so we can unlock the corresponding features, and we keep a record of your
-  membership on your device.</p>
+  membership on your device. Separately, when you buy or sell a drawing on the Art
+  Stall, we keep a record of that order (which drawing, the price, the commission, the
+  points you earn or spend, and its settlement and refund status) in our cloud backend.</p>
 
   <p><strong>e) Diagnostics.</strong> The App uses Google Firebase Crashlytics to report
   crashes and errors (for example: crash stack traces, app version and device model,
@@ -77,19 +86,23 @@
   <ul>
     <li><strong>Creating a drawing from a photo.</strong> You pick a photo from your
     photo library. Decoding, analysis and drawing generation all happen on your device.
-    The photo is <strong>not uploaded</strong> to us or to anyone else, and it is not
-    stored in our cloud backend.</li>
+    The photo is <strong>not uploaded</strong> to us or to anyone else — <strong>unless
+    you deliberately post that drawing to the Art Stall</strong>, in which case the
+    drawing and that photo are uploaded and made public to buyers (see section 6).</li>
     <li><strong>Drawing from scratch.</strong> The App does not use your camera; there is
     no camera capture feature.</li>
     <li><strong>Saving your finished artwork.</strong> When you choose to save or export a
     finished piece (or its creation video), the App writes the file to your photo library
     at your request, and/or hands it to the system share sheet so you can send it where
     you like. We do not receive a copy.</li>
-  </ul>
+      <li><strong>Usage analytics.</strong> We record feature-usage events (for example: completing a drawing, using a hint, starting a purchase) to improve the App and to diagnose problems. Analytics events never include your artwork, your photos, your nickname or any free-form text you type. We do not use them for advertising and we do not track you across other apps.</li>
+</ul>
 
   <h2>4. What we do <em>not</em> collect</h2>
   <ul>
-    <li>Your photos or videos as uploads — photo processing happens only on your device;</li>
+    <li>Your photos used purely for generating a drawing — photo processing happens on
+    your device, and such a photo is uploaded only if you post that drawing to the Art
+    Stall (that upload is described in section 6, not hidden here);</li>
     <li>Precise or approximate location, contacts, calendars, SMS or call logs;</li>
     <li>Microphone, health, or fitness data;</li>
     <li>Advertising identifiers, and any data used to track you across other apps or websites;</li>
@@ -106,26 +119,63 @@
     Authentication). Crash diagnostics are processed by Firebase Crashlytics. These
     services are operated by Google LLC and their servers are primarily located in the
     United States.</li>
+    <li><strong>In the cloud (if you post to the Art Stall):</strong> the drawing assets
+    (region data, line art, preview image, metadata) and the photo you created the drawing
+    from are stored in <strong>Google Firebase Cloud Storage</strong> and are publicly
+    downloadable by buyers; Art Stall orders, earnings and refund records are stored in
+    Cloud Firestore.</li>
   </ul>
   <p>We keep cloud data for as long as you use the App. When you delete content or your
-  account, it is removed from our cloud backend (see section 7).</p>
+  account, it is removed from our cloud backend (see section 8).</p>
 
-  <h2>6. How we use information, and who we share it with</h2>
+  <h2>6. The Art Stall (posting and selling drawings)</h2>
+  <p>The App includes a marketplace ("the Art Stall") where you can offer drawings you
+  generated from your own photos for other users to buy with in-app points. Posting is
+  always your choice, and this section describes exactly what it involves.</p>
+  <ul>
+    <li><strong>What is uploaded.</strong> When you post a drawing, we upload its assets
+    (region data, line art, preview image and metadata) together with <strong>the photo you
+    used to create that drawing</strong> to Google Firebase Cloud Storage. Those files are
+    <strong>publicly downloadable by buyers</strong> — in other words, the people who buy
+    your drawing can also see and download your photo. Before the upload the App shows you
+    the actual preview buyers will see and asks you to confirm.</li>
+    <li><strong>How the photo is handled.</strong> The uploaded photo is re-encoded with
+    <strong>EXIF location data stripped</strong> (capture location, camera model,
+    timestamp), and size limits apply (source photo ≤ 3 MB; the whole snapshot for one
+    drawing ≤ 8 MB).</li>
+    <li><strong>Records.</strong> Orders, prices, commission, your pending earnings and
+    refunds are stored in Cloud Firestore so that we can settle your earnings and handle
+    refunds.</li>
+    <li><strong>What a buyer gets.</strong> Permanent access for colouring and the ability
+    to save the finished artwork, but <strong>the drawing cannot be resold</strong>; a
+    buyer may request <strong>one dispute refund within 24 hours</strong>, and a broken
+    asset is refunded automatically and in full.</li>
+    <li><strong>Violating content.</strong> Every listing has a <strong>report
+    action</strong>. We act on reports <strong>within 24 hours</strong>; we may unlist the
+    drawing, ban the account and pursue legal remedies, and you can appeal a decision
+    in the App.</li>
+    <li><strong>Please do not upload</strong> photos that are not yours, photos showing
+    another person's face, copyrighted material, or any other content that breaks the
+    <a href="market.html">Art Stall Rules</a> or our <a href="terms.html">Terms of Use</a>.</li>
+  </ul>
+
+  <h2>7. How we use information, and who we share it with</h2>
   <p>We use the information described above only to operate the App: to sign you in, to
   keep your progress, to run the community feed, to deliver the features you paid for,
   to keep the service secure and to fix crashes. We do not sell your personal
   information and we do not share it for advertising.</p>
   <p>The data is processed by the following service providers on our behalf:</p>
   <ul>
-    <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Crashlytics) —
-    hosting, database, sign-in and crash reporting;</li>
+    <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Storage,
+    Crashlytics) — hosting, database, file storage for Art Stall snapshots, sign-in and
+    crash reporting;</li>
     <li><strong>Apple</strong> — App Store payments, subscriptions and receipts;</li>
     <li><strong>Google / Apple sign-in</strong> — only if you choose to link an account.</li>
   </ul>
   <p>We may also disclose information if we are legally required to do so, or where
   necessary to protect the rights and safety of users.</p>
 
-  <h2>7. Your choices and your rights</h2>
+  <h2>8. Your choices and your rights</h2>
   <ul>
     <li><strong>Use the App without an account:</strong> the core colouring experience
     works offline and without signing in; the community feed is the part that needs a
@@ -133,7 +183,12 @@
     <li><strong>Edit or clear your profile:</strong> change or empty your nickname and bio
     in the App's settings.</li>
     <li><strong>Delete content:</strong> delete your own posts and comments in the
-    community feed; report or block other users from the same menu.</li>
+    community feed; report or block other users from the same menu. Art Stall drawings you
+    posted can be unlisted at any time from "My stall", after which they are no longer
+    shown to buyers.</li>
+    <li><strong>Keep your photo private:</strong> if you never post a drawing to the Art
+    Stall, the photo behind it stays on your device. Only a drawing you deliberately post
+    (and its source photo) becomes public to buyers.</li>
     <li><strong>Delete your account:</strong> in the App, go to
     <em>Me → Edit profile → Delete account</em>. This permanently deletes your account,
     your cloud content (profile, posts, comments, likes) and your local data, including
@@ -146,33 +201,33 @@
     as our legal bases).</li>
   </ul>
 
-  <h2>8. Children</h2>
+  <h2>9. Children</h2>
   <p>The App is not directed to children under 13 (or the applicable age of consent in
   your region). We do not knowingly collect personal information from children. If you
   believe a child has provided us with personal information, contact us and we will
   delete it.</p>
 
-  <h2>9. Security</h2>
+  <h2>10. Security</h2>
   <p>Data in transit is encrypted (HTTPS/TLS), and access to our cloud database is
   restricted by security rules so that you can only read and modify your own records.
   No method of transmission or storage is completely secure, but we work to protect your
   information and to keep the App's handling of it minimal.</p>
 
-  <h2>10. International transfers</h2>
+  <h2>11. International transfers</h2>
   <p>Our service providers may process your information in countries other than your own
   (primarily the United States). Where required, transfers rely on the safeguards offered
   by those providers, such as standard contractual clauses.</p>
 
-  <h2>11. Changes to this policy</h2>
+  <h2>12. Changes to this policy</h2>
   <p>We may update this policy from time to time, for example if we add a feature that
   changes what we collect. Changes take effect when posted at this URL, and the date at
   the top of this page is updated.</p>
 
-  <h2>12. Contact</h2>
+  <h2>13. Contact</h2>
   <p>Questions, requests or complaints about privacy:
   <code>bytes.inno@gmail.com</code>. We respond within 24 hours.</p>
 
-  <footer>Photo Paint — Privacy Policy · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a> · <a href="../">All apps</a></footer>
+  <footer>Photo Paint — Privacy Policy · <a href="terms.html">Terms of Use</a> · <a href="market.html">Art Stall Rules</a> · <a href="support.html">Support</a> · <a href="delete-account.html">Delete account</a> · <a href="../">All apps</a></footer>
 </div>
 </body>
 </html>
